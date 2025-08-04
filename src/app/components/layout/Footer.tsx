@@ -2,28 +2,28 @@ import Link from 'next/link'
 import Container from '../ui/Container'
 
 const navigation = {
-  shop: [
-    { name: 'Attars', href: '/shop/attars' },
-    { name: 'French Perfumes', href: '/shop/french-perfumes' },
-    { name: 'Gift Sets', href: '/shop/gift-sets' },
-    { name: 'Exclusive Editions', href: '/shop/exclusive' },
-  ],
+  // shop: [
+  //   { name: 'Attars', href: '/shop/attars' },
+  //   { name: 'French Perfumes', href: '/shop/french-perfumes' },
+  //   { name: 'Gift Sets', href: '/shop/gift-sets' },
+  //   { name: 'Exclusive Editions', href: '/shop/exclusive' },
+  // ],
   company: [
     { name: 'About Us', href: '/about' },
-    { name: 'Blog', href: '/blog' },
+    { name: 'Blog', href: '/' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Careers', href: '/careers' },
+    { name: 'Careers', href: '/' },
   ],
   support: [
-    { name: 'Shipping', href: '/shipping' },
-    { name: 'Returns', href: '/returns' },
-    { name: 'FAQs', href: '/faqs' },
-    { name: 'Track Order', href: '/track' },
+    { name: 'Shipping', href: '/' },
+    { name: 'Returns', href: '/' },
+    { name: 'FAQs', href: '/' },
+    { name: 'Track Order', href: '/' },
   ],
   legal: [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Privacy Policy', href: '/' },
+    { name: 'Terms of Service', href: '/' },
+    { name: 'Cookie Policy', href: '/' },
   ],
   social: [
     {
@@ -75,7 +75,7 @@ export default function Footer() {
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8">
               <Link href="/" className="text-2xl font-display text-gold">
-                OWAIS TURABI
+                Golden Orchard
               </Link>
               <p className="text-sm leading-6 text-cream/80">
                 Crafting divine fragrances that capture the essence of luxury and tradition.
@@ -95,7 +95,7 @@ export default function Footer() {
             </div>
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
               <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
+                {/* <div>
                   <h3 className="text-sm font-semibold leading-6 text-gold">Shop</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.shop.map((item) => (
@@ -109,7 +109,7 @@ export default function Footer() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
                 <div className="mt-10 md:mt-0">
                   <h3 className="text-sm font-semibold leading-6 text-gold">Company</h3>
                   <ul role="list" className="mt-6 space-y-4">
@@ -162,7 +162,7 @@ export default function Footer() {
           </div>
           <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
             <p className="text-xs leading-5 text-cream/60">
-              &copy; {new Date().getFullYear()} OWAIS TURABI PERFUMES. All rights reserved.
+              &copy; {new Date().getFullYear()} Golden Orchard Perfumes. All rights reserved.
             </p>
           </div>
         </div>

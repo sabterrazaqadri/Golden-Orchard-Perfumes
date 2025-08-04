@@ -21,7 +21,7 @@ const testimonials = [
   },
   {
     content:
-      'OWAIS TURABI PERFUMES represents the pinnacle of luxury fragrance. The Midnight Rose is an absolute masterpiece that garners compliments wherever I go.',
+      'Golden Orchard represents the pinnacle of luxury fragrance. The Midnight Rose is an absolute masterpiece that garners compliments wherever I go.',
     author: {
       name: 'Kareem Ahmed',
       role: 'Art Director',
