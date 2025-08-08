@@ -49,7 +49,7 @@ export default function Testimonials() {
   const swiperRef = useRef(null)
 
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32">
+    <section className="relative overflow-hidden py-24 sm:py-32" id='about'>
       <Container>
         <div className="mx-auto max-w-2xl text-center">
           <motion.div

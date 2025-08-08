@@ -1,13 +1,24 @@
 'use client'
 
+
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Container from '../components/ui/Container'
 import Button from '../components/ui/Button'
 import Link from 'next/link'
 import { products } from '@/lib/product'
+import { useCartStore } from '@/lib/store/cart'
+import { useRouter } from 'next/navigation'
 
 export default function ProductsPage() {
+  const addToCart = useCartStore(state => state.addToCart)
+  const router = useRouter()
+
+  const handleBuyNow = (product : any) => {
+    addToCart(product, 1)
+    router.push('/cart')
+  }
+
   return (
     <section className="min-h-screen py-20 bg-gradient-to-b from-primary to-primary-dark text-cream mt-6">
       <Container>
@@ -43,7 +54,7 @@ export default function ProductsPage() {
                 <p className="text-sm text-cream/70 mb-4">{product.description}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-lg font-semibold text-gold">{product.price}</span>
-                  <Button size="sm">Buy Now</Button>
+                  <Button size="sm" onClick={() => handleBuyNow(product)}>Buy Now</Button>
                 </div>
               </div>
             </motion.div>

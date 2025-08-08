@@ -23,7 +23,7 @@ const item = {
 
 export default function FeaturedProducts() {
   return (
-    <section className="py-24 sm:py-32">
+    <section className="py-24 sm:py-32" id='collection'>
       <Container>
         <div className="md:flex md:items-center md:justify-between">
           <div className="max-w-2xl">
@@ -50,8 +50,9 @@ export default function FeaturedProducts() {
           viewport={{ once: true }}
           className="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8"
         >
-          {products.map((product) => (
-            <motion.div key={product.id} variants={item} className="group relative ">
+          {products.map((product, index) => (
+            <motion.div key={index} variants={item} className="group relative ">
+              <Link key={product.id} href={`/products/${product.slug}`}>
               <div className="aspect-[3/4] w-full overflow-hidden rounded-2xl bg-gray-900">
                 <Image
                   src={product.image}
@@ -67,15 +68,16 @@ export default function FeaturedProducts() {
                   <div>
                     {/* <p className="text-sm text-gold">{product.category}</p> */}
                     <h3 className="mt-1 text-lg font-semibold text-cream">
-                      <Link href={`/products/${product.slug}`}>
+                      
                         <span aria-hidden="true" className="absolute inset-0" />
                         {product.name}
-                      </Link>
+                      
                     </h3>
                   </div>
                   <p className="text-base font-medium text-cream">{product.price}</p>
                 </div>
               </div>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

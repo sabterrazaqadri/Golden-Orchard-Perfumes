@@ -9,11 +9,11 @@ import Button from '../ui/Button'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'Shop', href: '/shop' },
-  { name: 'Collections', href: '/collections' },
-  { name: 'About', href: '/about' },
+  { name: 'Shop', href: '/products' },
+  { name: 'Collections', href: '#collection' },
+  { name: 'About', href: '#about' },
   { name: 'Contact', href: '/contact' },
-  { name: 'Blog', href: '/blog' },
+  // { name: 'Blog', href: '/blog' },
 ]
 
 export default function Header() {
@@ -31,7 +31,7 @@ export default function Header() {
           <div className="flex lg:hidden">
             <button
               type="button"
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-cream"
+              className="-m-2.5 inline-flex items-center justify-center rounded-md ml-3 text-cream"
               onClick={() => setMobileMenuOpen(true)}
             >
               <span className="sr-only">Open main menu</span>
@@ -57,18 +57,18 @@ export default function Header() {
               />
               <span className="ml-2 text-sm font-medium text-cream group-hover:text-gold">0</span>
             </Link>
-            <Button variant="secondary" size="sm">
+            {/* <Button variant="secondary" size="sm">
               Sign in
-            </Button>
+            </Button> */}
           </div>
         </Container>
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <div className="fixed inset-0 z-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-primary px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#111827] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
           <div className="flex items-center justify-between">
             <Link href="/" className="-m-1.5 p-1.5">
-              <span className="font-display text-xl text-gold">OWAIS TURABI</span>
+              <span className="font-display text-xl text-gold">Golden Orchard</span>
             </Link>
             <button
               type="button"
@@ -92,11 +92,11 @@ export default function Header() {
                   </Link>
                 ))}
               </div>
-              <div className="py-6">
+              {/* <div className="py-6">
                 <Button className="w-full" variant="secondary">
                   Sign in
                 </Button>
-              </div>
+              </div> */}
             </div>
           </div>
         </Dialog.Panel>

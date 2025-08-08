@@ -46,7 +46,7 @@ export default function Hero() {
                 <Link href="/products"><Button size="lg">
                   Explore Collection
                 </Button></Link>
-                <Link href="/"><Button variant="secondary" size="lg">
+                <Link href="#about"><Button variant="secondary" size="lg">
                   Learn More
                 </Button></Link>
               </div>

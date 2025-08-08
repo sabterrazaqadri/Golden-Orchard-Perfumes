@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import { products } from '@/lib/product'
 import { notFound } from 'next/navigation'
@@ -7,13 +7,21 @@ import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 import { useCartStore } from '@/lib/store/cart'
 import { toast } from 'sonner'
+import * as React from 'react'
 
-export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  const product = products.find((p) => p.slug === params.slug)
+export default function ProductDetailPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  // ✅ unwrap params Promise
+  const { slug } = React.use(params)
+
+  const product = products.find((p) => p.slug === slug)
 
   if (!product) return notFound()
 
-  const addToCart = useCartStore((state:any) => state.addToCart)
+  const addToCart = useCartStore((state: any) => state.addToCart)
 
   const handleAddToCart = () => {
     addToCart(product)

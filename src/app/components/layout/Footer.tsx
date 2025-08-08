@@ -9,21 +9,20 @@ const navigation = {
   //   { name: 'Exclusive Editions', href: '/shop/exclusive' },
   // ],
   company: [
-    { name: 'About Us', href: '/about' },
-    { name: 'Blog', href: '/' },
+    { name: 'About Us', href: '#about' },
     { name: 'Contact', href: '/contact' },
-    { name: 'Careers', href: '/' },
+    { name: 'Collection', href: '/products' },
   ],
-  support: [
-    { name: 'Shipping', href: '/' },
-    { name: 'Returns', href: '/' },
-    { name: 'FAQs', href: '/' },
-    { name: 'Track Order', href: '/' },
-  ],
+  // support: [
+  //   { name: 'Shipping', href: '/' },
+  //   { name: 'Returns', href: '/' },
+  //   { name: 'FAQs', href: '/' },
+  //   { name: 'Track Order', href: '/' },
+  // ],
   legal: [
-    { name: 'Privacy Policy', href: '/' },
-    { name: 'Terms of Service', href: '/' },
-    { name: 'Cookie Policy', href: '/' },
+    { name: 'Privacy Policy', href: '/privacypolicy' },
+    { name: 'Terms of Service', href: '/termsofservice' },
+    { name: 'Cookie Policy', href: '/cookiepolicy' },
   ],
   social: [
     {
@@ -127,7 +126,7 @@ export default function Footer() {
                 </div>
               </div>
               <div className="md:grid md:grid-cols-2 md:gap-8">
-                <div>
+                {/* <div>
                   <h3 className="text-sm font-semibold leading-6 text-gold">Support</h3>
                   <ul role="list" className="mt-6 space-y-4">
                     {navigation.support.map((item) => (
@@ -141,7 +140,7 @@ export default function Footer() {
                       </li>
                     ))}
                   </ul>
-                </div>
+                </div> */}
                 <div className="mt-10 md:mt-0">
                   <h3 className="text-sm font-semibold leading-6 text-gold">Legal</h3>
                   <ul role="list" className="mt-6 space-y-4">
